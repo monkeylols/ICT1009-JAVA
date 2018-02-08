@@ -1,16 +1,21 @@
+import java.util.Date;
 
 public class Articles {
 
 	private String url;
 	private String content;
 	private String title;
+	private Date crawledDate;
+	
+	
 	public Articles(){
 		
 	}
-	public Articles(String url, String content, String title){
+	public Articles(String url, String title, String content){
 		this.url = url;
 		this.content = content;
 		this.title = title;
+		this.crawledDate = new Date();
 		System.out.println(url);
 		System.out.println(content);
 		System.out.println(title);
@@ -33,5 +38,11 @@ public class Articles {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public Date getCrawledDate() {
+		return crawledDate;
+	}
+	public void setCrawledDate(Date crawledDate) {
+		this.crawledDate = crawledDate;
 	}
 }
